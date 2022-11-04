@@ -1,0 +1,332 @@
+/*--- TABLET*/
+/*--- PHONE*/
+/*----------------------------------------------------------------- DESKTOP*/
+html body {
+  overflow: hidden;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* ------- FONDO IZQUIERDO ------*/
+.fondo {
+  background-image: url(/images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/*----------"FORMULARIO COMPLETADO"----------*/
+.completo {
+  margin-top: 230px;
+}
+
+/*----------FORMULARIO----------*/
+.formularioCompleto {
+  margin: 110px 230px;
+}
+.formularioCompleto .espacioformulario {
+  margin: 15px 0;
+}
+
+/*----------TARJETA FRENTE/ REVERSO----------*/
+.tarjetas {
+  position: fixed;
+  /*----------TARJETA FRENTE----------*/
+  /*----------TARJETA REVERSO----------*/
+}
+.tarjetas img {
+  box-shadow: 17px 18px 60px -35px rgb(0, 0, 0);
+  width: 332px;
+}
+.tarjetas .tarjetaFrente {
+  position: fixed;
+  width: 26%;
+  top: 110px;
+  left: 210px;
+  /*----------TARJETA FRENTE TEXTOS----------*/
+  /*----------TARJETA FRENTE ICONO----------*/
+}
+.tarjetas .tarjetaFrente h1 {
+  font-size: 20px;
+  color: white;
+  position: fixed;
+  top: 210px;
+  left: 230px;
+  letter-spacing: 2px;
+}
+.tarjetas .tarjetaFrente span {
+  font-size: 18px;
+  color: white;
+  position: fixed;
+  top: 245px;
+  left: 230px;
+}
+.tarjetas .tarjetaFrente .mesDeTarjeta {
+  font-size: 18px;
+  color: white;
+  position: fixed;
+  top: 245px;
+  left: 459px;
+}
+.tarjetas .tarjetaFrente .anoDeTarjeta {
+  font-size: 18px;
+  color: white;
+  position: fixed;
+  top: 245px;
+  left: 495px;
+}
+.tarjetas .tarjetaFrente .linea {
+  font-size: 18px;
+  color: white;
+  position: fixed;
+  top: 243px;
+  left: 485px;
+}
+.tarjetas .tarjetaFrente .iconoTarjeta {
+  width: 5%;
+  position: fixed;
+  top: 125px;
+  left: 230px;
+}
+.tarjetas .tarjetaReverso {
+  position: fixed;
+  width: 26%;
+  top: 310px;
+  left: 260px;
+  /*----------TARJETA REVERSO TEXTOS----------*/
+}
+.tarjetas .tarjetaReverso .cvcTarjeta {
+  font-size: 18px;
+  color: white;
+  position: fixed;
+  top: 386px;
+  left: 515px;
+  letter-spacing: 2px;
+}
+
+/*----------OCULTA FORMULARIO----------*/
+.oculto {
+  display: none;
+}
+
+/*----------FORMULARIO INCOMPLETO----------*/
+.faltaAno,
+.faltaCvc,
+.faltaMes,
+.faltaNumero,
+.faltaNombre {
+  font-size: 13px;
+  font-weight: bold;
+  color: red;
+  padding: 0%;
+  margin: 0%;
+  position: fixed;
+}
+
+/*----------------------------------------------------------------- TABLET*/
+@media (min-width: 377px) and (max-width: 768px) {
+  /*----------FORMULARIO----------*/
+  .formularioCompleto {
+    padding: 0%;
+    margin: 130px 200px;
+    font-size: 16px;
+  }
+  /*----------TARJETA FRENTE/ REVERSO----------*/
+  .tarjetas {
+    position: fixed;
+    /*----------TARJETA FRENTE----------*/
+    /*----------TARJETA REVERSO----------*/
+  }
+  .tarjetas img {
+    box-shadow: 17px 18px 60px -35px rgb(0, 0, 0);
+    width: 300px;
+  }
+  .tarjetas .tarjetaFrente {
+    position: fixed;
+    width: 26%;
+    top: 140px;
+    left: 30px;
+    /*----------TARJETA FRENTE TEXTOS----------*/
+    /*----------TARJETA FRENTE ICONO----------*/
+  }
+  .tarjetas .tarjetaFrente h1 {
+    font-size: 18px;
+    color: white;
+    position: fixed;
+    top: 240px;
+    left: 40px;
+    letter-spacing: 2px;
+  }
+  .tarjetas .tarjetaFrente span {
+    font-size: 16px;
+    color: white;
+    position: fixed;
+    top: 270px;
+    left: 40px;
+  }
+  .tarjetas .tarjetaFrente .mesDeTarjeta {
+    font-size: 16px;
+    color: white;
+    position: fixed;
+    top: 270px;
+    left: 257px;
+  }
+  .tarjetas .tarjetaFrente .anoDeTarjeta {
+    font-size: 16px;
+    color: white;
+    position: fixed;
+    top: 270px;
+    left: 290px;
+  }
+  .tarjetas .tarjetaFrente .linea {
+    font-size: 16px;
+    color: white;
+    position: fixed;
+    top: 269px;
+    left: 280px;
+  }
+  .tarjetas .tarjetaFrente .iconoTarjeta {
+    width: 7%;
+    position: fixed;
+    top: 150px;
+    left: 40px;
+  }
+  .tarjetas .tarjetaReverso {
+    position: fixed;
+    width: 26%;
+    top: 332px;
+    left: 70px;
+    /*----------TARJETA REVERSO TEXTOS----------*/
+  }
+  .tarjetas .tarjetaReverso .cvcTarjeta {
+    font-size: 16px;
+    color: white;
+    position: fixed;
+    top: 401px;
+    left: 298px;
+    letter-spacing: 2px;
+  }
+  /*----------"FORMULARIO COMPLETADO"----------*/
+  .completo {
+    margin-top: 220px;
+    margin-left: 170px;
+  }
+  /*----------FORMULARIO INCOMPLETO----------*/
+  .faltaAno,
+.faltaCvc,
+.faltaMes,
+.faltaNumero,
+.faltaNombre {
+    font-size: 11px;
+    font-weight: bold;
+    color: red;
+    padding: 0%;
+    margin: 0%;
+    position: fixed;
+  }
+}
+/*----------------------------------------------------------------- PHONE*/
+@media (max-width: 376px) {
+  /* ------- FONDO IZQUIERDO ------*/
+  .fondo {
+    background-image: url(/images/bg-main-mobile.png);
+    background-size: 100%;
+    height: 25vh;
+    margin-bottom: 70px;
+  }
+  /*----------"FORMULARIO COMPLETADO"----------*/
+  .completo {
+    margin-top: 130px;
+  }
+  /*----------FORMULARIO----------*/
+  .formularioCompleto {
+    padding: 10px;
+    margin: 0%;
+  }
+  /*----------TARJETA FRENTE/ REVERSO----------*/
+  .tarjetas {
+    position: fixed;
+    /*----------TARJETA FRENTE----------*/
+    /*----------TARJETA REVERSO----------*/
+  }
+  .tarjetas img {
+    box-shadow: 17px 18px 60px -35px rgb(0, 0, 0);
+    width: 220px;
+  }
+  .tarjetas .tarjetaFrente {
+    position: fixed;
+    width: 26%;
+    top: 140px;
+    left: 130px;
+    /*----------TARJETA FRENTE TEXTOS----------*/
+    /*----------TARJETA FRENTE ICONO----------*/
+  }
+  .tarjetas .tarjetaFrente h1 {
+    font-size: 13px;
+    color: white;
+    position: fixed;
+    top: 205px;
+    left: 140px;
+    letter-spacing: 2px;
+  }
+  .tarjetas .tarjetaFrente span {
+    font-size: 14px;
+    color: white;
+    position: fixed;
+    top: 230px;
+    left: 140px;
+  }
+  .tarjetas .tarjetaFrente .mesDeTarjeta {
+    font-size: 14px;
+    color: white;
+    position: fixed;
+    top: 230px;
+    left: 280px;
+  }
+  .tarjetas .tarjetaFrente .anoDeTarjeta {
+    font-size: 14px;
+    color: white;
+    position: fixed;
+    top: 230px;
+    left: 313px;
+  }
+  .tarjetas .tarjetaFrente .linea {
+    font-size: 14px;
+    color: white;
+    position: fixed;
+    top: 229px;
+    left: 302px;
+  }
+  .tarjetas .tarjetaFrente .iconoTarjeta {
+    width: 7%;
+    position: fixed;
+    top: 150px;
+    left: 140px;
+  }
+  .tarjetas .tarjetaReverso {
+    position: fixed;
+    width: 26%;
+    top: 40px;
+    left: 30px;
+    /*----------TARJETA REVERSO TEXTOS----------*/
+  }
+  .tarjetas .tarjetaReverso .cvcTarjeta {
+    font-size: 14px;
+    color: white;
+    position: fixed;
+    top: 90px;
+    left: 195px;
+    letter-spacing: 2px;
+  }
+  /*----------FORMULARIO INCOMPLETO----------*/
+  .faltaAno,
+.faltaCvc,
+.faltaMes,
+.faltaNumero,
+.faltaNombre {
+    font-size: 13px;
+    font-weight: bold;
+    color: red;
+    padding: 0%;
+    margin: 0%;
+    position: fixed;
+  }
+}/*# sourceMappingURL=style.css.map */

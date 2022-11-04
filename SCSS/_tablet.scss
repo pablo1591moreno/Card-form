@@ -1,0 +1,113 @@
+/*----------FORMULARIO----------*/
+.formularioCompleto {
+    padding: 0%;
+    margin: 130px 200px;
+    font-size: 16px;
+}
+
+
+/*----------TARJETA FRENTE/ REVERSO----------*/
+
+.tarjetas {
+    position: $posicion;
+
+    img {
+        box-shadow: $sombra;
+        width: 300px;
+    }
+
+
+    /*----------TARJETA FRENTE----------*/
+    .tarjetaFrente {
+        position: $posicion;
+        width: 26%;
+        top: 140px;
+        left: 30px;
+
+        /*----------TARJETA FRENTE TEXTOS----------*/
+
+        h1 {
+            font-size: $textoTablet + 2px ;
+            @include colorPosicion;
+            top: 240px;
+            left: 40px;
+            letter-spacing: $espacioTexto;
+        }
+
+        span {
+
+            font-size: $textoTablet;
+            @include colorPosicion;
+            top: $alturaTablet;
+            left: 40px;
+
+        }
+
+        .mesDeTarjeta {
+            font-size: $textoTablet;
+            @include colorPosicion;
+            top: $alturaTablet;
+            left: 257px;
+        }
+
+        .anoDeTarjeta {
+            font-size: $textoTablet;
+            @include colorPosicion;
+            top: $alturaTablet;
+            left: 290px;
+        }
+
+        .linea {
+            font-size: $textoTablet;
+            @include colorPosicion;
+            top: $alturaTablet - 1px;
+            left: 280px;
+        }
+
+        /*----------TARJETA FRENTE ICONO----------*/
+        .iconoTarjeta {
+            width: 7%;
+            position: $posicion;
+            top: 150px;
+            left: 40px;
+        }
+
+    }
+
+
+    /*----------TARJETA REVERSO----------*/
+    .tarjetaReverso {
+        position: $posicion;
+        width: 26%;
+        top: 332px;
+        left: 70px;
+
+        /*----------TARJETA REVERSO TEXTOS----------*/
+        .cvcTarjeta {
+            font-size: $textoTablet;
+            @include colorPosicion;
+            top: 401px;
+            left: 298px;
+            letter-spacing: $espacioTexto;
+
+        }
+
+    }
+
+}
+
+/*----------"FORMULARIO COMPLETADO"----------*/
+.completo {
+    margin-top: 220px;
+    margin-left: 170px;
+}
+
+/*----------FORMULARIO INCOMPLETO----------*/
+.faltaAno,
+.faltaCvc,
+.faltaMes,
+.faltaNumero,
+.faltaNombre {
+    font-size: $textoTablet - 5px;
+    @include formularioIncompleto();
+}

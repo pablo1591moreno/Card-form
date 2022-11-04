@@ -1,0 +1,120 @@
+/* ------- FONDO IZQUIERDO ------*/
+.fondo {
+    background-image: url(/images/bg-main-mobile.png);
+    background-size: 100%;
+    height: 25vh;
+    margin-bottom: 70px;
+}
+
+
+/*----------"FORMULARIO COMPLETADO"----------*/
+.completo {
+    margin-top: 130px;
+}
+
+
+/*----------FORMULARIO----------*/
+.formularioCompleto {
+    padding: 10px;
+    margin: 0%;
+}
+
+
+/*----------TARJETA FRENTE/ REVERSO----------*/
+.tarjetas {
+    position: $posicion;
+
+    img {
+        box-shadow: $sombra;
+        width: 220px;
+    }
+
+
+    /*----------TARJETA FRENTE----------*/
+    .tarjetaFrente {
+        position: $posicion;
+        width: 26%;
+        top: 140px;
+        left: 130px;
+
+        /*----------TARJETA FRENTE TEXTOS----------*/
+
+        h1 {
+            font-size: $textoPhone - 1px;
+            @include colorPosicion;
+            top: 205px;
+            left: 140px;
+            letter-spacing: $espacioTexto
+        }
+
+        span {
+
+            font-size: $textoPhone;
+            @include colorPosicion;
+            top: $alturaPhone;
+            left: 140px;
+
+        }
+
+        .mesDeTarjeta {
+            font-size: $textoPhone;
+            @include colorPosicion;
+            top: $alturaPhone;
+            left: 280px;
+        }
+
+        .anoDeTarjeta {
+            font-size: $textoPhone;
+            @include colorPosicion;
+            top: $alturaPhone;
+            left: 313px;
+        }
+
+        .linea {
+            font-size: $textoPhone;
+            @include colorPosicion;
+            top: $alturaPhone - 1px;
+            left: 302px;
+        }
+
+        /*----------TARJETA FRENTE ICONO----------*/
+        .iconoTarjeta {
+            width: 7%;
+            position: $posicion;
+            top: 150px;
+            left: 140px;
+        }
+
+    }
+
+
+    /*----------TARJETA REVERSO----------*/
+    .tarjetaReverso {
+        position: $posicion;
+        width: 26%;
+        top: 40px;
+        left: 30px;
+
+        /*----------TARJETA REVERSO TEXTOS----------*/
+        .cvcTarjeta {
+            font-size: $textoPhone;
+            @include colorPosicion;
+            top: 90px;
+            left: 195px;
+            letter-spacing: $espacioTexto;
+
+        }
+
+    }
+
+}
+
+/*----------FORMULARIO INCOMPLETO----------*/
+.faltaAno,
+.faltaCvc,
+.faltaMes,
+.faltaNumero,
+.faltaNombre {
+    font-size: $textoPhone - 1px;
+    @include formularioIncompleto();
+}

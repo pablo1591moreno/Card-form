@@ -1,0 +1,182 @@
+$texto: 18px;
+$altura : 245px;
+
+/*--- TABLET*/
+$textoTablet: $texto - 2px;
+$alturaTablet : $altura +25px;
+
+/*--- PHONE*/
+$textoPhone: $texto - 4px;
+$alturaPhone : $altura - 15px;
+
+$espacioTexto: 2px;
+$posicion: fixed;
+$color: white;
+$sombra: 17px 18px 60px -35px rgb(0, 0, 0);
+
+@mixin formularioIncompleto {
+    font-weight: bold;
+    color: red;
+    padding: 0%;
+    margin: 0%;
+    position: $posicion;
+}
+
+@mixin colorPosicion {
+    color: $color;
+    position: $posicion;
+}
+
+
+/*----------------------------------------------------------------- DESKTOP*/
+html body {
+    overflow: hidden;
+    font-family: 'Space Grotesk', sans-serif;
+
+}
+
+/* ------- FONDO IZQUIERDO ------*/
+.fondo {
+    background-image: url(/images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+/*----------"FORMULARIO COMPLETADO"----------*/
+.completo {
+    margin-top: 230px;
+}
+
+
+/*----------FORMULARIO----------*/
+.formularioCompleto {
+    margin: 110px 230px;
+
+    .espacioformulario {
+        margin: 15px 0
+    }
+}
+
+
+/*----------TARJETA FRENTE/ REVERSO----------*/
+.tarjetas {
+    position: $posicion;
+
+    img {
+        box-shadow: $sombra;
+        width: 332px;
+    }
+
+
+    /*----------TARJETA FRENTE----------*/
+    .tarjetaFrente {
+        position: $posicion;
+        width: 26%;
+        top: 110px;
+        left: 210px;
+
+        /*----------TARJETA FRENTE TEXTOS----------*/
+
+        h1 {
+            font-size: $texto + 2px;
+            @include colorPosicion;
+            top: 210px;
+            left: 230px;
+            letter-spacing: $espacioTexto;
+        }
+
+        span {
+
+            font-size: $texto;
+            @include colorPosicion;
+            top: $altura;
+            left: 230px;
+
+        }
+
+        .mesDeTarjeta {
+            font-size: $texto;
+            @include colorPosicion;
+            top: $altura;
+            left: 459px;
+        }
+
+        .anoDeTarjeta {
+            font-size: $texto;
+            @include colorPosicion;
+            top: $altura;
+            left: 495px;
+        }
+
+        .linea {
+            font-size: $texto;
+            @include colorPosicion;
+            top: $altura - 2px;
+            left: 485px;
+        }
+
+        /*----------TARJETA FRENTE ICONO----------*/
+        .iconoTarjeta {
+            width: 2%;
+            position: $posicion;
+            top: 125px;
+            left: 230px;
+        }
+
+    }
+
+
+    /*----------TARJETA REVERSO----------*/
+    .tarjetaReverso {
+        position: $posicion;
+        width: 26%;
+        top: 310px;
+        left: 260px;
+
+        /*----------TARJETA REVERSO TEXTOS----------*/
+        .cvcTarjeta {
+            font-size: $texto;
+            @include colorPosicion;
+            top: 386px;
+            left: 515px;
+            letter-spacing: $espacioTexto;
+        }
+
+    }
+
+
+}
+
+/*----------OCULTA FORMULARIO----------*/
+.oculto {
+    display: none
+}
+
+/*----------FORMULARIO INCOMPLETO----------*/
+.faltaAno,
+.faltaCvc,
+.faltaMes,
+.faltaNumero,
+.faltaNombre {
+    font-size: $texto - 5px;
+    @include formularioIncompleto();
+}
+
+
+/*----------------------------------------------------------------- TABLET*/
+@media (min-width: 377px) and (max-width: 768px) {
+
+
+    @import "tablet";
+
+
+}
+
+
+/*----------------------------------------------------------------- PHONE*/
+@media (max-width: 376px) {
+
+    @import "phone";
+
+}
