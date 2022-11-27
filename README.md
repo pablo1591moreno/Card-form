@@ -10,3 +10,4 @@ confirma ingreso si todos los datos estan OK
 - HTML
 - SASS
 - JAVASCRIPT
+- BOOTSTRAP
