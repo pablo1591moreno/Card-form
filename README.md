@@ -1,9 +1,6 @@
 # Card form
 
-Formulario de tarjeta de credito
-reprica los datos en la tarjeta de ejemplo 
-valida los ingresos de datos 
-confirma ingreso si todos los datos estan OK
+Formulario de tarjeta de credito que reprica los datos ingresados y valida que los datos sean correctos. 
 
 ## Recursos utilizados
 
