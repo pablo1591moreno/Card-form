@@ -11,3 +11,7 @@ confirma ingreso si todos los datos estan OK
 - SASS
 - JAVASCRIPT
 - BOOTSTRAP
+
+## IMAGEN
+
+![mockup (card-form)](https://user-images.githubusercontent.com/95658189/205461205-e2940059-a00f-4f8c-b01a-0f3bf205a0e7.jpg)
