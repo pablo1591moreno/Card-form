@@ -140,6 +140,10 @@ button.addEventListener(`click`, (e) => {
         const formulario = document.querySelector(`form`);
         formulario.style.display = 'none'
 
+        const tarjetas = document.querySelector(`.tarjetas`);
+        tarjetas.style.display = 'none'
+
+
         const completo = document.querySelector(`.oculto`);
         completo.style.display = 'block'
 

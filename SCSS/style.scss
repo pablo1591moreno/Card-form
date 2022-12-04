@@ -1,14 +1,18 @@
 $texto: 18px;
-$altura : 245px;
-$weight-font : 600;
+$izquierda: 255px;
+$alto: 110px;
+$alturaFecha: 245px;
+$weight-font: 600;
 
 /*--- TABLET*/
-$textoTablet: $texto - 2px;
-$alturaTablet : $altura +25px;
+$textoTablet: 16px;
+$alturaTablet : 270px;
 
 /*--- PHONE*/
-$textoPhone: $texto - 4px;
-$alturaPhone : $altura - 15px;
+$textoPhone: 14px;
+$alturaPhone: 250px;
+$altoPhone: 130px ;
+$izquierdaPhone: 115px;
 
 $espacioTexto: 2px;
 $posicion: fixed;
@@ -49,6 +53,7 @@ html body {
         height: 500px;
         margin: 55px auto;
         border-radius: 20px;
+        
     }
 
 }
@@ -60,7 +65,7 @@ html body {
 
     label {
         font-weight: $weight-font;
-        font-size: $texto - 2px;
+        font-size: $texto - 4px;
         color: $color;
     }
 
@@ -106,8 +111,8 @@ html body {
     .tarjetaFrente {
         position: $posicion;
         width: 26%;
-        top: 110px;
-        left: 255px ;
+        top: $alto ;
+        left: $izquierda ;
 
 
         /*----------TARJETA FRENTE TEXTOS----------*/
@@ -116,8 +121,8 @@ html body {
             font-weight: $weight-font;
             font-size: $texto + 2px;
             @include colorPosicion;
-            top: 210px;
-            left: 275px;
+            top: $alto + 100px;
+            left: $izquierda + 20px;
             letter-spacing: $espacioTexto;
         }
 
@@ -125,8 +130,8 @@ html body {
             font-weight: $weight-font;
             font-size: $texto;
             @include colorPosicion;
-            top: $altura;
-            left: 275px;
+            top: $alturaFecha;
+            left: $izquierda + 20px;
 
         }
 
@@ -134,32 +139,32 @@ html body {
             font-weight: $weight-font;
             font-size: $texto;
             @include colorPosicion;
-            top: $altura;
-            left: 504px;
+            top: $alturaFecha;
+            left: $izquierda + 249px;
         }
 
         .anoDeTarjeta {
             font-weight: $weight-font;
             font-size: $texto;
             @include colorPosicion;
-            top: $altura;
-            left:  540px;
+            top: $alturaFecha;
+            left: $izquierda + 285px;
         }
 
         .linea {
             font-weight: $weight-font;
             font-size: $texto;
             @include colorPosicion;
-            top: $altura - 2px;
-            left: 530px;
+            top: $alturaFecha;
+            left: $izquierda + 275px;
         }
 
         /*----------TARJETA FRENTE ICONO----------*/
         .iconoTarjeta {
             width: 3%;
             position: $posicion;
-            top: 125px;
-            left: 275px;
+            top: $alto + 15px;
+            left: $izquierda + 20px;
         }
 
     }
@@ -169,16 +174,16 @@ html body {
     .tarjetaReverso {
         position: $posicion;
         width: 26%;
-        top: 310px;
-        left: 305px;
+        top: $alto + 200px;
+        left: $izquierda + 50px;
 
         /*----------TARJETA REVERSO TEXTOS----------*/
         .cvcTarjeta {
             font-weight: $weight-font;
             font-size: $texto;
             @include colorPosicion;
-            top: 386px;
-            left: 560px;
+            top: $alto + 276px;
+            left: $izquierda + 305px;
             letter-spacing: $espacioTexto;
         }
 
@@ -212,7 +217,6 @@ html body {
 
 /*----------------------------------------------------------------- TABLET*/
 @media (min-width: 427px) and (max-width: 768px) {
-
 
     @import "tablet";
 

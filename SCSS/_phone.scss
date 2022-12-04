@@ -10,22 +10,18 @@ html body {
         background-color: rgba(255, 255, 255, 0.247);   
         backdrop-filter: blur(10px);
         box-shadow: $sombra;
-        width: 90%;
-        height: 630px;                
-        margin: 20px auto;
+        width: 85%;
+        height: 550px;                
+        margin: 40px auto;
         border-radius: 20px;          
     }
-
 }
-
-
 
 /*----------FORMULARIO----------*/
 .formularioCompleto {
-    padding: 0 30px;
-    margin: 250px 0;
+    padding: 0 50px;
+    margin: 280px 0;    
 }
-
 
 /*----------TARJETA FRENTE/ REVERSO----------*/
 .tarjetas {
@@ -41,16 +37,16 @@ html body {
     .tarjetaFrente {
         position: $posicion;
         width: 26%;
-        top: 140px;
-        left: 135px;
+        top: $altoPhone + 30px;
+        left: $izquierdaPhone ;
 
         /*----------TARJETA FRENTE TEXTOS----------*/
 
         h1 {
             font-size: $textoPhone - 1px;
             @include colorPosicion;
-            top: 205px;
-            left:145px;
+            top: $altoPhone + 95px;
+            left: $izquierdaPhone + 10px;
             letter-spacing: $espacioTexto
         }
 
@@ -59,7 +55,7 @@ html body {
             font-size: $textoPhone;
             @include colorPosicion;
             top: $alturaPhone;
-            left: 145px;
+            left: $izquierdaPhone + 10px;
 
         }
 
@@ -67,29 +63,29 @@ html body {
             font-size: $textoPhone;
             @include colorPosicion;
             top: $alturaPhone;
-            left: 285px;
+            left: $izquierdaPhone + 150px;
         }
 
         .anoDeTarjeta {
             font-size: $textoPhone;
             @include colorPosicion;
             top: $alturaPhone;
-            left: 318px;
+            left: $izquierdaPhone + 183px;
         }
 
         .linea {
             font-size: $textoPhone;
             @include colorPosicion;
             top: $alturaPhone - 1px;
-            left: 307px;
+            left: $izquierdaPhone + 172px;
         }
 
         /*----------TARJETA FRENTE ICONO----------*/
         .iconoTarjeta {
             width: 7%;
             position: $posicion;
-            top: 150px;
-            left: 145px;
+            top: $altoPhone + 40px;
+            left: $izquierdaPhone + 10px;
         }
 
     }
@@ -99,15 +95,15 @@ html body {
     .tarjetaReverso {
         position: $posicion;
         width: 26%;
-        top: 40px;
-        left: 35px;
+        top: $altoPhone - 70px ;
+        left: $izquierdaPhone - 75px;
 
         /*----------TARJETA REVERSO TEXTOS----------*/
         .cvcTarjeta {
             font-size: $textoPhone;
             @include colorPosicion;
-            top: 90px;
-            left: 200px;
+            top: $altoPhone - 20px;
+            left: $izquierdaPhone + 85px;
             letter-spacing: $espacioTexto;
 
         }
@@ -124,4 +120,15 @@ html body {
 .faltaNombre {
     font-size: $textoPhone - 1px;
     @include formularioIncompleto();
+}
+
+/*----------OCULTA FORMULARIO----------*/
+.oculto {
+    display: none;
+    position: $posicion;
+    top: 20%;
+
+    h2{
+        color:$color
+    }
 }
