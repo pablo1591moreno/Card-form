@@ -1,5 +1,6 @@
 $texto: 18px;
 $altura : 245px;
+$weight-font : 600;
 
 /*--- TABLET*/
 $textoTablet: $texto - 2px;
@@ -13,6 +14,7 @@ $espacioTexto: 2px;
 $posicion: fixed;
 $color: white;
 $sombra: 17px 18px 60px -35px rgb(0, 0, 0);
+$fondo: rgb(245, 245, 245);
 
 @mixin formularioIncompleto {
     font-weight: bold;
@@ -29,35 +31,66 @@ $sombra: 17px 18px 60px -35px rgb(0, 0, 0);
 
 
 /*----------------------------------------------------------------- DESKTOP*/
+
+
 html body {
-    overflow: hidden;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    display: flex;
+    background-image: url(/images/fondo2.png);
+    background-size: cover;
+    
+
+
+    .fondo {
+        background-color: rgba(255, 255, 255, 0.247);
+        backdrop-filter: blur(5px);
+        box-shadow: $sombra;
+        width: 920px;
+        height: 500px;
+        margin: 55px auto;
+        border-radius: 20px;
+    }
 
 }
-
-/* ------- FONDO IZQUIERDO ------*/
-.fondo {
-    background-image: url(/images/bg-main-desktop.png);
-    background-repeat: no-repeat;
-    height: 100vh;
-}
-
-
-/*----------"FORMULARIO COMPLETADO"----------*/
-.completo {
-    margin-top: 230px;
-}
-
 
 /*----------FORMULARIO----------*/
 .formularioCompleto {
-    margin: 110px 230px;
+    position: $posicion;
+    margin: 11% 55%;
+
+    label {
+        font-weight: $weight-font;
+        font-size: $texto - 2px;
+        color: $color;
+    }
+
+    input,
+    .mes,
+    .ano {
+        background-color: rgba(255, 255, 255, 0.178);
+        font-weight: $weight-font;
+        color: $color;
+    }
+
+    input::placeholder {
+        color: $color;
+    }
 
     .espacioformulario {
-        margin: 15px 0
+        margin: 15px 0 5px 0;
     }
-}
 
+    .boton {
+        margin: 10px 0;
+
+        buttom {
+            background-color:#1c1c1c;
+            border: none;
+        }
+
+    }
+
+}
 
 /*----------TARJETA FRENTE/ REVERSO----------*/
 .tarjetas {
@@ -74,54 +107,59 @@ html body {
         position: $posicion;
         width: 26%;
         top: 110px;
-        left: 210px;
+        left: 255px ;
+
 
         /*----------TARJETA FRENTE TEXTOS----------*/
 
         h1 {
+            font-weight: $weight-font;
             font-size: $texto + 2px;
             @include colorPosicion;
             top: 210px;
-            left: 230px;
+            left: 275px;
             letter-spacing: $espacioTexto;
         }
 
         span {
-
+            font-weight: $weight-font;
             font-size: $texto;
             @include colorPosicion;
             top: $altura;
-            left: 230px;
+            left: 275px;
 
         }
 
         .mesDeTarjeta {
+            font-weight: $weight-font;
             font-size: $texto;
             @include colorPosicion;
             top: $altura;
-            left: 459px;
+            left: 504px;
         }
 
         .anoDeTarjeta {
+            font-weight: $weight-font;
             font-size: $texto;
             @include colorPosicion;
             top: $altura;
-            left: 495px;
+            left:  540px;
         }
 
         .linea {
+            font-weight: $weight-font;
             font-size: $texto;
             @include colorPosicion;
             top: $altura - 2px;
-            left: 485px;
+            left: 530px;
         }
 
         /*----------TARJETA FRENTE ICONO----------*/
         .iconoTarjeta {
-            width: 2%;
+            width: 3%;
             position: $posicion;
             top: 125px;
-            left: 230px;
+            left: 275px;
         }
 
     }
@@ -132,14 +170,15 @@ html body {
         position: $posicion;
         width: 26%;
         top: 310px;
-        left: 260px;
+        left: 305px;
 
         /*----------TARJETA REVERSO TEXTOS----------*/
         .cvcTarjeta {
+            font-weight: $weight-font;
             font-size: $texto;
             @include colorPosicion;
             top: 386px;
-            left: 515px;
+            left: 560px;
             letter-spacing: $espacioTexto;
         }
 
@@ -150,10 +189,17 @@ html body {
 
 /*----------OCULTA FORMULARIO----------*/
 .oculto {
-    display: none
+    display: none;
+    position: $posicion;
+    top: 33%;
+
+    h2{
+        color:$color
+    }
 }
 
 /*----------FORMULARIO INCOMPLETO----------*/
+
 .faltaAno,
 .faltaCvc,
 .faltaMes,
@@ -165,7 +211,7 @@ html body {
 
 
 /*----------------------------------------------------------------- TABLET*/
-@media (min-width: 377px) and (max-width: 768px) {
+@media (min-width: 427px) and (max-width: 768px) {
 
 
     @import "tablet";
@@ -175,7 +221,7 @@ html body {
 
 
 /*----------------------------------------------------------------- PHONE*/
-@media (max-width: 376px) {
+@media (max-width: 426px) {
 
     @import "phone";
 

@@ -125,7 +125,7 @@ cardCvcTarjet.addEventListener(`keyup`, (e) => {
 const button = document.querySelector(`.button`);
 
 button.addEventListener(`click`, (e) => {
-    e.preventDefault
+    e.preventDefault()
 
     console.log(
         "nombre:", nombreValidacion,
@@ -160,6 +160,7 @@ button.addEventListener(`click`, (e) => {
         const faltaCvc = document.querySelector(`.faltaCvc`);
         faltaCvc.innerText = cvcValidacion ? '' : 'falta rellenar'
 
+        
     }
 
     const finalizar = document.querySelector(`.finalizar`);

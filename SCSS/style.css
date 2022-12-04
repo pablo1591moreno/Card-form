@@ -2,28 +2,57 @@
 /*--- PHONE*/
 /*----------------------------------------------------------------- DESKTOP*/
 html body {
-  overflow: hidden;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Noto Sans", sans-serif;
+  display: flex;
+  background-image: url(/images/fondo2.png);
+  background-size: cover;
 }
-
-/* ------- FONDO IZQUIERDO ------*/
-.fondo {
-  background-image: url(/images/bg-main-desktop.png);
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-
-/*----------"FORMULARIO COMPLETADO"----------*/
-.completo {
-  margin-top: 230px;
+html body .fondo {
+  background-color: rgba(255, 255, 255, 0.247);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  box-shadow: 17px 18px 60px -35px rgb(0, 0, 0);
+  width: 920px;
+  height: 500px;
+  margin: 55px auto;
+  border-radius: 20px;
 }
 
 /*----------FORMULARIO----------*/
 .formularioCompleto {
-  margin: 110px 230px;
+  position: fixed;
+  margin: 11% 55%;
+}
+.formularioCompleto label {
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+}
+.formularioCompleto input,
+.formularioCompleto .mes,
+.formularioCompleto .ano {
+  background-color: rgba(255, 255, 255, 0.178);
+  font-weight: 600;
+  color: white;
+}
+.formularioCompleto input::-moz-placeholder {
+  color: white;
+}
+.formularioCompleto input:-ms-input-placeholder {
+  color: white;
+}
+.formularioCompleto input::placeholder {
+  color: white;
 }
 .formularioCompleto .espacioformulario {
-  margin: 15px 0;
+  margin: 15px 0 5px 0;
+}
+.formularioCompleto .boton {
+  margin: 10px 0;
+}
+.formularioCompleto .boton buttom {
+  background-color: #1c1c1c;
+  border: none;
 }
 
 /*----------TARJETA FRENTE/ REVERSO----------*/
@@ -40,71 +69,82 @@ html body {
   position: fixed;
   width: 26%;
   top: 110px;
-  left: 210px;
+  left: 255px;
   /*----------TARJETA FRENTE TEXTOS----------*/
   /*----------TARJETA FRENTE ICONO----------*/
 }
 .tarjetas .tarjetaFrente h1 {
+  font-weight: 600;
   font-size: 20px;
   color: white;
   position: fixed;
   top: 210px;
-  left: 230px;
+  left: 275px;
   letter-spacing: 2px;
 }
 .tarjetas .tarjetaFrente span {
+  font-weight: 600;
   font-size: 18px;
   color: white;
   position: fixed;
   top: 245px;
-  left: 230px;
+  left: 275px;
 }
 .tarjetas .tarjetaFrente .mesDeTarjeta {
+  font-weight: 600;
   font-size: 18px;
   color: white;
   position: fixed;
   top: 245px;
-  left: 459px;
+  left: 504px;
 }
 .tarjetas .tarjetaFrente .anoDeTarjeta {
+  font-weight: 600;
   font-size: 18px;
   color: white;
   position: fixed;
   top: 245px;
-  left: 495px;
+  left: 540px;
 }
 .tarjetas .tarjetaFrente .linea {
+  font-weight: 600;
   font-size: 18px;
   color: white;
   position: fixed;
   top: 243px;
-  left: 485px;
+  left: 530px;
 }
 .tarjetas .tarjetaFrente .iconoTarjeta {
-  width: 5%;
+  width: 3%;
   position: fixed;
   top: 125px;
-  left: 230px;
+  left: 275px;
 }
 .tarjetas .tarjetaReverso {
   position: fixed;
   width: 26%;
   top: 310px;
-  left: 260px;
+  left: 305px;
   /*----------TARJETA REVERSO TEXTOS----------*/
 }
 .tarjetas .tarjetaReverso .cvcTarjeta {
+  font-weight: 600;
   font-size: 18px;
   color: white;
   position: fixed;
   top: 386px;
-  left: 515px;
+  left: 560px;
   letter-spacing: 2px;
 }
 
 /*----------OCULTA FORMULARIO----------*/
 .oculto {
   display: none;
+  position: fixed;
+  top: 33%;
+}
+.oculto h2 {
+  color: white;
 }
 
 /*----------FORMULARIO INCOMPLETO----------*/
@@ -122,7 +162,7 @@ html body {
 }
 
 /*----------------------------------------------------------------- TABLET*/
-@media (min-width: 377px) and (max-width: 768px) {
+@media (min-width: 427px) and (max-width: 768px) {
   /*----------FORMULARIO----------*/
   .formularioCompleto {
     padding: 0%;
@@ -224,22 +264,28 @@ html body {
   }
 }
 /*----------------------------------------------------------------- PHONE*/
-@media (max-width: 376px) {
+@media (max-width: 426px) {
   /* ------- FONDO IZQUIERDO ------*/
-  .fondo {
-    background-image: url(/images/bg-main-mobile.png);
-    background-size: 100%;
-    height: 25vh;
-    margin-bottom: 70px;
+  html body {
+    font-family: "Noto Sans", sans-serif;
+    display: flex;
+    background-image: url(/images/fondo2.png);
+    height: 100vmax;
   }
-  /*----------"FORMULARIO COMPLETADO"----------*/
-  .completo {
-    margin-top: 130px;
+  html body .fondo {
+    background-color: rgba(255, 255, 255, 0.247);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    box-shadow: 17px 18px 60px -35px rgb(0, 0, 0);
+    width: 90%;
+    height: 630px;
+    margin: 20px auto;
+    border-radius: 20px;
   }
   /*----------FORMULARIO----------*/
   .formularioCompleto {
-    padding: 10px;
-    margin: 0%;
+    padding: 0 30px;
+    margin: 250px 0;
   }
   /*----------TARJETA FRENTE/ REVERSO----------*/
   .tarjetas {
@@ -255,7 +301,7 @@ html body {
     position: fixed;
     width: 26%;
     top: 140px;
-    left: 130px;
+    left: 135px;
     /*----------TARJETA FRENTE TEXTOS----------*/
     /*----------TARJETA FRENTE ICONO----------*/
   }
@@ -264,7 +310,7 @@ html body {
     color: white;
     position: fixed;
     top: 205px;
-    left: 140px;
+    left: 145px;
     letter-spacing: 2px;
   }
   .tarjetas .tarjetaFrente span {
@@ -272,40 +318,40 @@ html body {
     color: white;
     position: fixed;
     top: 230px;
-    left: 140px;
+    left: 145px;
   }
   .tarjetas .tarjetaFrente .mesDeTarjeta {
     font-size: 14px;
     color: white;
     position: fixed;
     top: 230px;
-    left: 280px;
+    left: 285px;
   }
   .tarjetas .tarjetaFrente .anoDeTarjeta {
     font-size: 14px;
     color: white;
     position: fixed;
     top: 230px;
-    left: 313px;
+    left: 318px;
   }
   .tarjetas .tarjetaFrente .linea {
     font-size: 14px;
     color: white;
     position: fixed;
     top: 229px;
-    left: 302px;
+    left: 307px;
   }
   .tarjetas .tarjetaFrente .iconoTarjeta {
     width: 7%;
     position: fixed;
     top: 150px;
-    left: 140px;
+    left: 145px;
   }
   .tarjetas .tarjetaReverso {
     position: fixed;
     width: 26%;
     top: 40px;
-    left: 30px;
+    left: 35px;
     /*----------TARJETA REVERSO TEXTOS----------*/
   }
   .tarjetas .tarjetaReverso .cvcTarjeta {
@@ -313,7 +359,7 @@ html body {
     color: white;
     position: fixed;
     top: 90px;
-    left: 195px;
+    left: 200px;
     letter-spacing: 2px;
   }
   /*----------FORMULARIO INCOMPLETO----------*/
