@@ -1,6 +1,6 @@
 # Card form
 
-Este valida la información de un formulario de tarjeta de crédito. Verifica que el número de tarjeta tenga la longitud adecuada. Valida que el nombre en la tarjeta no esté vacío y se muestre en mayúsculas. También valida la fecha de vencimiento de la tarjeta y el código de seguridad. Todo esto se realiza en tiempo real mientras el usuario escribe en el formulario.
+Este formulario valida la información de una tarjeta de crédito. Verifica que el número de tarjeta tenga la longitud adecuada. Valida que el nombre en la tarjeta no esté vacío y se muestre en mayúsculas. También valida la fecha de vencimiento de la tarjeta y el código de seguridad. Todo esto se realiza en tiempo real mientras el usuario escribe en el formulario.
 
 ## Recursos utilizados
 
