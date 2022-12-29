@@ -1,7 +1,7 @@
 $texto: 18px;
 $izquierda: 380px;
 $alto: 190px;
-$alturaFecha: 245px;
+$alturaFecha: 295px;
 $weight-font: 600;
 
 /*--- TABLET*/
@@ -120,7 +120,7 @@ html body {
             font-weight: $weight-font;
             font-size: $texto + 2px;
             @include colorPosicion;
-            top: $alto + 100px;
+            top: $alto + 140px;
             left: $izquierda + 20px;
             letter-spacing: $espacioTexto;
         }
