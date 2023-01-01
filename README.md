@@ -11,7 +11,7 @@ Este formulario valida la información de una tarjeta de crédito. Verifica que 
 
 ## Ejemplo en vivo
 
-[https://github.com/pablo1591moreno/card-form/settings/pages] (https://github.com/pablo1591moreno/card-form/settings/pages)
+[https://pablo1591moreno.github.io/card-form/] (https://pablo1591moreno.github.io/card-form/)
 
 ## IMAGEN
 
