@@ -1,7 +1,7 @@
 $texto: 18px;
 $izquierda: 50px;
-$alto: 55px;
-$alturaFecha: 155px;
+$alto: 60px;
+$alturaFecha: 165px;
 $weight-font: 600;
 
 /*--- TABLET*/
@@ -160,9 +160,9 @@ html body {
 
         /*----------TARJETA FRENTE ICONO----------*/
         .iconoTarjeta {
-            width: 3%;
+            width: 5%;
             position: $posicion;
-            top: $alto + 15px;
+            top: $alto + 25px;
             left: $izquierda + 20px;
         }
 

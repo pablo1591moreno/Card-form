@@ -3,42 +3,35 @@ const cardNumberTarjet = document.querySelector(`.numeroParaTarjeta`);
 let numeroValidacion = false;
 
 cardNumberTarjet.addEventListener(`keyup`, (e) => {
+    // Obtener el valor del evento y actualizar el valor del elemento
     let valorNumero = e.target.value;
     cardNumberTarjet.value = valorNumero
         .replace(/\s/g, ``).replace(/\D/g, ``).replace(/([0-9]{4})/g, `$1 `).trim();
-    const placeholder = cardNumberTarjet.placeholder
 
-    document.getElementsByClassName("numeroDeTarjeta")[0].innerText = valorNumero || placeholder
-
-    if (valorNumero === ' ' || valorNumero.length < 19) {
-        numeroValidacion = false;
-    } else {
-        numeroValidacion = true;
-    }
-
-    console.log(parseInt(valorNumero))
-
+    // Actualizar el contenido del elemento con la clase "numeroDeTarjeta"
+    const placeholder = cardNumberTarjet.placeholder;
+    document.getElementsByClassName("numeroDeTarjeta")[0].innerText = valorNumero || placeholder;
+    
+    // Establecer la variable "numeroValidacion" en verdadero o falso según corresponda
+    numeroValidacion = valorNumero !== ' ' && valorNumero.length >= 19;
 });
-
 
 // FORMULARIO --- NOMBRE --------------------------------------------------------------------------------------
 const cardNameTarjet = document.querySelector(`.nombreParaTarjeta`);
 let nombreValidacion = false;
 
+
 cardNameTarjet.addEventListener(`keyup`, (e) => {
+    // Obtener el valor del evento y el placeholder del elemento
     let valorLetra = e.target.value;
     const placeholder = e.target.placeholder;
 
+    // Actualizar el contenido del elemento con la clase "nombreDeTarjeta"
     document.getElementsByClassName("nombreDeTarjeta")[0].innerText = valorLetra.toUpperCase() || placeholder
 
-    if (valorLetra === '') {
-        nombreValidacion = false;
-    } else {
-        nombreValidacion = true;
-    }
-
+    // Establecer la variable "nombreValidacion" en verdadero o falso según corresponda
+    nombreValidacion = valorLetra !== '';
 });
-
 
 
 // FORMULARIO --- FECHA --------------------------------------------------------------------------------------
@@ -53,20 +46,19 @@ for (let i = 1; i <= 12; i++) {
 
 }
 
-cardMesTarjet.addEventListener('change', (e) => {
-    let valorMes = e.target.value;
-    document.getElementsByClassName("mesDeTarjeta")[0].innerHTML = valorMes < 10 ? 0 + valorMes : valorMes
+cardMesTarjet.addEventListener('change', updateMesTarjeta);
 
-    if (valorMes === '0') {
-        mesValidacion = false;
-    } else {
-        mesValidacion = true;
-    }
-
-    console.log(parseInt(valorMes))
-
-})
-
+function updateMesTarjeta(event) {
+  // Obtiene el valor del elemento y lo almacena en 'valorMes'
+  const valorMes = event.target.value;
+  // Muestra el valor del mes en el elemento con la clase 'mesDeTarjeta'
+  // Si el valor del mes es menor a 10, se agrega un cero delante del número
+  document.querySelector('.mesDeTarjeta').innerHTML = valorMes < 10 ? `0${valorMes}` : valorMes;
+  
+  // Establece la variable 'mesValidacion' en verdadero si el valor del mes es diferente a cero
+  mesValidacion = valorMes !== '0';
+  
+}
 
 
 // AÑO -------------------
