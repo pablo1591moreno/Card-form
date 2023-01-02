@@ -1,7 +1,7 @@
 $texto: 18px;
-$izquierda: 380px;
-$alto: 190px;
-$alturaFecha: 295px;
+$izquierda: 50px;
+$alto: 55px;
+$alturaFecha: 155px;
 $weight-font: 600;
 
 /*--- TABLET*/
@@ -51,8 +51,8 @@ html body {
         box-shadow: $sombra;
         width: 920px;
         height: 500px;
-        margin: 135px auto;
-        border-radius: 20px;        
+        margin: 25vh auto;
+        border-radius: 20px;
     }
 
 }
@@ -60,7 +60,7 @@ html body {
 /*----------FORMULARIO----------*/
 .formularioCompleto {
     position: $posicion;
-    margin: 14% 51%;
+    margin: 10% 51%;
 
     label {
         font-weight: $weight-font;
@@ -194,8 +194,7 @@ html body {
 /*----------OCULTA FORMULARIO----------*/
 .oculto {
     display: none;
-    position: $posicion;
-    top: 33%;
+    margin-top: 150px;
 
     h2{
         color:$color
