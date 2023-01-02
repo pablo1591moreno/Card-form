@@ -4,12 +4,13 @@
 html body {
   font-family: "Noto Sans", sans-serif;
   display: flex;
-  background-image: url(/images/fonso1.svg);
+  background-image: url(images/fonso1.svg);
   background-size: auto;
 }
 html body .fondo {
   background-color: rgba(255, 255, 255, 0.288);
-  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
   box-shadow: 17px 18px 60px -35px rgb(0, 0, 0);
   width: 920px;
   height: 500px;
@@ -32,6 +33,12 @@ html body .fondo {
 .formularioCompleto .ano {
   background-color: rgba(255, 255, 255, 0.178);
   font-weight: 600;
+  color: white;
+}
+.formularioCompleto input::-moz-placeholder {
+  color: white;
+}
+.formularioCompleto input:-ms-input-placeholder {
   color: white;
 }
 .formularioCompleto input::placeholder {
@@ -243,10 +250,10 @@ html body .fondo {
   }
   /*----------FORMULARIO INCOMPLETO----------*/
   .faltaAno,
-  .faltaCvc,
-  .faltaMes,
-  .faltaNumero,
-  .faltaNombre {
+.faltaCvc,
+.faltaMes,
+.faltaNumero,
+.faltaNombre {
     font-size: 11px;
     font-weight: bold;
     color: red;
@@ -267,7 +274,8 @@ html body .fondo {
   }
   html body .fondo {
     background-color: rgba(255, 255, 255, 0.247);
-    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     box-shadow: 17px 18px 60px -35px rgb(0, 0, 0);
     width: 85%;
     height: 550px;
@@ -356,10 +364,10 @@ html body .fondo {
   }
   /*----------FORMULARIO INCOMPLETO----------*/
   .faltaAno,
-  .faltaCvc,
-  .faltaMes,
-  .faltaNumero,
-  .faltaNombre {
+.faltaCvc,
+.faltaMes,
+.faltaNumero,
+.faltaNombre {
     font-size: 13px;
     font-weight: bold;
     color: red;
@@ -376,6 +384,4 @@ html body .fondo {
   .oculto h2 {
     color: white;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
