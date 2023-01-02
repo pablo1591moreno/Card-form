@@ -4,7 +4,6 @@
 html body {
   font-family: "Noto Sans", sans-serif;
   display: flex;
-  background-image: url(images/fonso1.svg);
   background-size: auto;
 }
 html body .fondo {
