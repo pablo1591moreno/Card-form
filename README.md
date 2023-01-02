@@ -9,9 +9,10 @@ Este formulario valida la información de una tarjeta de crédito. Verifica que 
 - JAVASCRIPT
 - BOOTSTRAP
 
+## Ejemplo en vivo
+
+https://pablo1591moreno.github.io/card-form/
+
 ## IMAGEN
 
-
-![mockup tablet-laptop-smartphone (card-form)](https://user-images.githubusercontent.com/95658189/205521305-f11d118a-fc76-41af-b92c-ce0913e8f2df.jpg)
-![mockup tablet-laptop-smartphone (card-form)2](https://user-images.githubusercontent.com/95658189/205521316-ee792c43-3e2b-4687-a336-8dc68c532b9a.jpg)
-![mockup tablet-laptop-smartphone (card-form)3](https://user-images.githubusercontent.com/95658189/205521322-30426ded-de20-45da-b421-9ac4c2406420.jpg)
+![card-form](https://user-images.githubusercontent.com/95658189/210018134-9be61a15-d46b-4491-9fdd-68797bec269f.jpg)
