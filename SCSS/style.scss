@@ -67,6 +67,7 @@ html body {
         font-size: $texto - 4px;
         color: $color;
     }
+    
 
     input,
     .mes,
@@ -74,6 +75,7 @@ html body {
         background-color: rgba(255, 255, 255, 0.178);
         font-weight: $weight-font;
         color: $color;
+        border: none;
     }
 
     input::placeholder {

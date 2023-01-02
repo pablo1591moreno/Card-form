@@ -22,7 +22,11 @@ html body {
 .formularioCompleto {
     padding: 0 20px;
     margin: 250px 0;    
+    input, .mes , .ano{
+        border: none;
+    }
 }
+
 
 /*----------TARJETA FRENTE/ REVERSO----------*/
 .tarjetas {
