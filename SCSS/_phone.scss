@@ -12,21 +12,21 @@ html body {
         backdrop-filter: blur(10px);
         box-shadow: $sombra;
         width: 85%;
-        height: 550px;                
-        margin: 40px auto;
+        height: 575px;                
+        margin: 100px auto;
         border-radius: 20px;          
     }
 }
 
 /*----------FORMULARIO----------*/
 .formularioCompleto {
-    padding: 0 50px;
-    margin: 280px 0;    
+    padding: 0 20px;
+    margin: 250px 0;    
 }
 
 /*----------TARJETA FRENTE/ REVERSO----------*/
 .tarjetas {
-    position: $posicion;
+    
 
     img {
         box-shadow: $sombra;

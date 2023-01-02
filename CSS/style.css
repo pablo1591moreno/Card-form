@@ -277,18 +277,17 @@ html body .fondo {
             backdrop-filter: blur(10px);
     box-shadow: 17px 18px 60px -35px rgb(0, 0, 0);
     width: 85%;
-    height: 550px;
-    margin: 40px auto;
+    height: 575px;
+    margin: 100px auto;
     border-radius: 20px;
   }
   /*----------FORMULARIO----------*/
   .formularioCompleto {
-    padding: 0 50px;
-    margin: 280px 0;
+    padding: 0 20px;
+    margin: 250px 0;
   }
   /*----------TARJETA FRENTE/ REVERSO----------*/
   .tarjetas {
-    position: fixed;
     /*----------TARJETA FRENTE----------*/
     /*----------TARJETA REVERSO----------*/
   }
@@ -299,8 +298,8 @@ html body .fondo {
   .tarjetas .tarjetaFrente {
     position: fixed;
     width: 26%;
-    top: 160px;
-    left: 115px;
+    top: 130px;
+    left: 89px;
     /*----------TARJETA FRENTE TEXTOS----------*/
     /*----------TARJETA FRENTE ICONO----------*/
   }
@@ -308,57 +307,57 @@ html body .fondo {
     font-size: 13px;
     color: white;
     position: fixed;
-    top: 225px;
-    left: 125px;
+    top: 195px;
+    left: 99px;
     letter-spacing: 2px;
   }
   .tarjetas .tarjetaFrente span {
     font-size: 14px;
     color: white;
     position: fixed;
-    top: 250px;
-    left: 125px;
+    top: 220px;
+    left: 99px;
   }
   .tarjetas .tarjetaFrente .mesDeTarjeta {
     font-size: 14px;
     color: white;
     position: fixed;
-    top: 250px;
-    left: 265px;
+    top: 220px;
+    left: 239px;
   }
   .tarjetas .tarjetaFrente .anoDeTarjeta {
     font-size: 14px;
     color: white;
     position: fixed;
-    top: 250px;
-    left: 298px;
+    top: 220px;
+    left: 272px;
   }
   .tarjetas .tarjetaFrente .linea {
     font-size: 14px;
     color: white;
     position: fixed;
-    top: 249px;
-    left: 287px;
+    top: 219px;
+    left: 261px;
   }
   .tarjetas .tarjetaFrente .iconoTarjeta {
     width: 7%;
     position: fixed;
-    top: 170px;
-    left: 125px;
+    top: 140px;
+    left: 99px;
   }
   .tarjetas .tarjetaReverso {
     position: fixed;
     width: 26%;
-    top: 60px;
-    left: 40px;
+    top: 30px;
+    left: 14px;
     /*----------TARJETA REVERSO TEXTOS----------*/
   }
   .tarjetas .tarjetaReverso .cvcTarjeta {
     font-size: 14px;
     color: white;
     position: fixed;
-    top: 110px;
-    left: 200px;
+    top: 80px;
+    left: 174px;
     letter-spacing: 2px;
   }
   /*----------FORMULARIO INCOMPLETO----------*/

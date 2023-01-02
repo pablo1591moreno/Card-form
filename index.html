@@ -22,18 +22,18 @@
 
 <body style="background-image: url(images/fonso1.svg);">
 
-  <div class="fondo col-8">
+  <div class="fondo col-lg-8">
 
   <!--   FORMULARIO COMPLETADO  -->
 
   <div class="completo oculto text-center">
     <img src="images/iconComplete.svg" width=60px alt="icon-complete">
     <h2 class="m-4 ">Formulario Completado</h2>
-    <button class="btn btn-primary btn-dark col-md-4 finalizar">Finalizar</button>
+    <button class="btn btn-primary btn-dark col-lg-md-4 finalizar">Finalizar</button>
   </div>
 
   <!--   FORMULARIO   -->
-  <form class=" formularioCompleto col-5">
+  <form class=" formularioCompleto col-lg-5 col-12">
     <!--    NOMBRE    -->
     <label class="espacioformulario">Name</label>
     <input type="text" class="form-control nombreParaTarjeta " placeholder="JANE APPLESEED" maxlength="24" />
@@ -48,22 +48,22 @@
       <!-- MM / YY -->    
       
         <div class="row">
-          <div class="col-8">
+          <div class="col-lg-8 col-8">
 
-            <div class="">
+            <div >
              <label class="espacioformulario">Exp. Date (MM/YY)</label>
             </div>
 
             <div class="row">
 
-              <div class="col-6">
+              <div class="col-lg-6 col-6">
                 <select class="form-control mes">
                   <option class="mesParaTargeta" value="0">00</option>
                 </select>
                 <p class="faltaMes"></p>
               </div>
 
-              <div class="col-6">
+              <div class="col-lg-6 col-6">
                 <select class="form-control ano">
                   <option class="anoParaTargeta" value="00">00</option>
                 </select>
@@ -74,7 +74,7 @@
           </div>          
           <!--    CVC    -->
           
-          <div class="col-4">
+          <div class="col-lg-4 col-4">
             
             <label class="espacioformulario">CVC</label>
           <input type="text" class="form-control cvc" placeholder="000" maxlength="3" />
@@ -85,7 +85,7 @@
 
       <!--    BOTON     -->
       <div class="boton">
-        <button type="submit" class="btn btn-primary btn-dark espacioformulario col-md-12 col-12 button"> Confirmar
+        <button type="submit" class="btn btn-primary btn-dark espacioformulario col-lg-md-12 col-lg-12 col-12 button"> Confirmar
         </button>
       </div>
 
