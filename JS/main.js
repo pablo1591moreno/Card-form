@@ -11,7 +11,7 @@ cardNumberTarjet.addEventListener(`keyup`, (e) => {
     // Actualizar el contenido del elemento con la clase "numeroDeTarjeta"
     const placeholder = cardNumberTarjet.placeholder;
     document.getElementsByClassName("numeroDeTarjeta")[0].innerText = valorNumero || placeholder;
-    
+
     // Establecer la variable "numeroValidacion" en verdadero o falso según corresponda
     numeroValidacion = valorNumero !== ' ' && valorNumero.length >= 19;
 });
@@ -49,15 +49,13 @@ for (let i = 1; i <= 12; i++) {
 cardMesTarjet.addEventListener('change', updateMesTarjeta);
 
 function updateMesTarjeta(event) {
-  // Obtiene el valor del elemento y lo almacena en 'valorMes'
-  const valorMes = event.target.value;
-  // Muestra el valor del mes en el elemento con la clase 'mesDeTarjeta'
-  // Si el valor del mes es menor a 10, se agrega un cero delante del número
-  document.querySelector('.mesDeTarjeta').innerHTML = valorMes < 10 ? `0${valorMes}` : valorMes;
-  
-  // Establece la variable 'mesValidacion' en verdadero si el valor del mes es diferente a cero
-  mesValidacion = valorMes !== '0';
-  
+    // Obtiene el valor del elemento y lo almacena en 'valorMes'
+    const valorMes = event.target.value;
+    // Muestra el valor del mes en el elemento con la clase 'mesDeTarjeta'
+    document.querySelector('.mesDeTarjeta').innerHTML = valorMes < 10 ? `0${valorMes}` : valorMes;
+    // Establece la variable 'mesValidacion' en verdadero si el valor del mes es diferente a cero
+    mesValidacion = valorMes !== '0';
+
 }
 
 
@@ -65,16 +63,17 @@ function updateMesTarjeta(event) {
 const cardAnoTarjet = document.querySelector(`.ano`);
 let anoValidacion = false;
 
+// Iteramos desde el año 2015 hasta 2030
 for (let i = 2015; i <= 2030; i++) {
 
     document.getElementsByClassName("ano")[0].innerHTML += `<option value="${i}">${i}</option>`
-
 }
 
 cardAnoTarjet.addEventListener('change', (e) => {
+    // Tomamos el valor seleccionado
     let valorAno = e.target.value < 1 ? e.target.value : e.target.value.slice(2)
+    // Actualizamos el contenido del elemento con clase "anoDeTarjeta" con el valor seleccionado
     document.getElementsByClassName("anoDeTarjeta")[0].innerHTML = valorAno
-
 
     if (valorAno === '00') {
         anoValidacion = false;
@@ -82,9 +81,8 @@ cardAnoTarjet.addEventListener('change', (e) => {
         anoValidacion = true;
     }
 
-    console.log(parseInt(valorAno))
+});
 
-})
 
 
 
@@ -93,54 +91,49 @@ const cardCvcTarjet = document.querySelector(`.cvc`);
 let cvcValidacion = false;
 
 cardCvcTarjet.addEventListener(`keyup`, (e) => {
-
+    
     let valorCvc = e.target.value;
-    cardCvcTarjet.value = valorCvc
-        .replace(/\D/g, ``)
-
+    // Remplazamos los caracteres que no sean dígitos con una cadena vacía
+    cardCvcTarjet.value = valorCvc.replace(/\D/g, ``);
+    // Tomamos el placeholder del elemento
     const placeholder = e.target.placeholder;
-    document.getElementsByClassName("cvcTarjeta")[0].innerText = valorCvc || placeholder
-
+    // Actualizamos el contenido del elemento con clase "cvcTarjeta" con el valor del elemento o el placeholder si no hay valor
+    document.getElementsByClassName("cvcTarjeta")[0].innerText = valorCvc || placeholder;
+  
     if (valorCvc.length < 3) {
-        cvcValidacion = false;
+      cvcValidacion = false;
     } else {
-        cvcValidacion = true;
+      cvcValidacion = true;
     }
-
-    console.log(parseInt(valorCvc))
-
-});
-
+  
+  });
+  
 
 
 // BUTTON CONFIRMAR --------------------------------------------------------------------------------------
 const button = document.querySelector(`.button`);
 
 button.addEventListener(`click`, (e) => {
+    // Prevenimos la acción predeterminada del botón
     e.preventDefault()
 
-    console.log(
-        "nombre:", nombreValidacion,
-        " numero:", numeroValidacion,
-        " mes:", mesValidacion,
-        " año:", anoValidacion,
-        " CVC:", cvcValidacion)
-
-
+    // Si todas las validaciones son verdaderas
     if (numeroValidacion && cvcValidacion && anoValidacion && mesValidacion && nombreValidacion == true) {
 
+        // Ocultamos el formulario y las tarjetas
         const formulario = document.querySelector(`form`);
         formulario.style.display = 'none'
-
         const tarjetas = document.querySelector(`.tarjetas`);
         tarjetas.style.display = 'none'
 
-
+        // Mostramos el elemento oculto
         const completo = document.querySelector(`.oculto`);
         completo.style.display = 'block'
 
+    
     } else {
 
+        // Mostramos un mensaje de error para cada elemento que falta rellenar
         const faltaNombre = document.querySelector(`.faltaNombre`);
         faltaNombre.innerText = nombreValidacion ? '' : 'falta rellenar'
 
@@ -155,16 +148,12 @@ button.addEventListener(`click`, (e) => {
 
         const faltaCvc = document.querySelector(`.faltaCvc`);
         faltaCvc.innerText = cvcValidacion ? '' : 'falta rellenar'
-
-        
     }
 
+    // Agregamos un event listener al elemento finalizar
     const finalizar = document.querySelector(`.finalizar`);
-
     finalizar.addEventListener(`click`, (e) => {
-
+        // Recargamos la página cuando se haga clic en finalizar
         location.reload()
-
     })
-
-}) 
+})
